@@ -158,3 +158,12 @@ git add lib/hello.rb
 git rm hello.rb
 git commit -m "Moved hello.rb to lib"
 
+Adding branch to remote 
+____________-
+$ git push --set-upstream origin  AC0028_MAY
+Enter passphrase for key '/c/Users/saritha/.ssh/id_rsa':
+Total 0 (delta 0), reused 0 (delta 0)
+To git@github.com:shashi-pullakandam/hellotest.git
+ * [new branch]      AC0028_MAY -> AC0028_MAY
+Branch AC0028_MAY set up to track remote branch AC0028_MAY from origin by rebasi
+ng.
