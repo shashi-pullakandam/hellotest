@@ -1,0 +1,160 @@
+git commands
+----global commands---
+git config --global user.name "shashi pullakandam"
+git config --global user.email "spullak@gmail.com"
+
+--setup line ending preference  windows
+
+git config --global core.autocrlf true  <input for windows?
+
+git config --global core.safecrlf true
+
+--------------------------
+create repository ---git init
+adding to stage -- git add <file name>
+commiting to stage -- git commit -m "First commit"
+
+--tracking  changes
+  git --log
+  git log --pretty=oneline
+  git log --pretty=oneline --max-count=2
+  git log --pretty=oneline --since='5 minutes ago'
+  git log --pretty=oneline --until='5 minutes ago'
+  git log --pretty=oneline --author=<your name>
+  git log --pretty=oneline --all
+  changes made in 7 days ago
+  git log --all --pretty=format:'%h %cd %s (%an)' --since='7 days ago'
+  git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  
+  [alias]
+   hist= git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+
+  --tagging versions
+  get tag v1 
+  get tag -- shows all tag 
+  get checkout v1 --check out current version m  head is in detached
+  ----
+  --revert unstaged  chanages
+  -- make sure  git checkout < branch>
+      chanage the file xyz.txt
+      git add xyz.txt
+      git checkout xyz.txt
+      git status 
+--revert staged  chanages
+  -- make sure  git checkout < branch>
+      chanage the file xyz.txt
+      git add xyz.txt
+      git reset HEAD  xyz.txt
+      git status       
+      -------------------------   
+  --revert commited  chanages
+   -- make sure  git checkout < branch>
+       chanage the file xyz.txt
+       git add xyz.txt
+       git commit -m commit 
+       git status 
+       git 
+       git revert HEAD
+       git status 
+      ------------------------- 
+      removing  commits from branch
+      make sure  git checkout < branch>
+      git tag <v2>
+      git  reset --hard v2
+             chanage the file xyz.txt
+             git add xyz.txt
+             git commit -m commit 
+             git status 
+             git 
+             git reset --hard v2
+       	     git status 
+       	     
+--
+removing tags 
+git tag -d  <tag name >
+
+-- amending  comments 
+git commands
+----global commands---
+git config --global user.name "shashi pullakandam"
+git config --global user.email "spullak@gmail.com"
+
+--setup line ending preference  windows
+
+git config --global core.autocrlf true  <input for windows?
+
+git config --global core.safecrlf true
+
+--------------------------
+create repository ---git init
+adding to stage -- git add <file name>
+commiting to stage -- git commit -m "First commit"
+
+--tracking  changes
+  git --log
+  git log --pretty=oneline
+  git log --pretty=oneline --max-count=2
+  git log --pretty=oneline --since='5 minutes ago'
+  git log --pretty=oneline --until='5 minutes ago'
+  git log --pretty=oneline --author=<your name>
+  git log --pretty=oneline --all
+  changes made in 7 days ago
+  git log --all --pretty=format:'%h %cd %s (%an)' --since='7 days ago'
+  git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  
+  [alias]
+   hist= git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+
+  --tagging versions
+  get tag v1 
+  get tag -- shows all tag 
+  get checkout v1 --check out current version m  head is in detached
+  ----
+  --revert unstaged  chanages
+  -- make sure  git checkout < branch>
+      chanage the file xyz.txt
+      git add xyz.txt
+      git checkout xyz.txt
+      git status 
+--revert staged  chanages
+  -- make sure  git checkout < branch>
+      chanage the file xyz.txt
+      git add xyz.txt
+      git reset HEAD  xyz.txt
+      git status       
+      -------------------------   
+  --revert commited  chanages
+   -- make sure  git checkout < branch>
+       chanage the file xyz.txt
+       git add xyz.txt
+       git commit -m commit 
+       git status 
+       git 
+       git revert HEAD
+       git status 
+      ------------------------- 
+      removing  commits from branch
+      make sure  git checkout < branch>
+      git tag <v2>
+      git  reset --hard v2
+             chanage the file xyz.txt
+             git add xyz.txt
+             git commit -m commit 
+             git status 
+             git 
+             git reset --hard v2
+       	     git status 
+       	     
+-------
+removing tags 
+git tag -d  <tag name >
+--amending comments 
+git commit --amend -m "Add ....."
+
+how to move files 
+mkdir lib
+mv hello.rb lib
+git add lib/hello.rb
+git rm hello.rb
+git commit -m "Moved hello.rb to lib"
+
